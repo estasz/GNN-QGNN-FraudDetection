@@ -13,7 +13,7 @@
    <a href="mailto:erik.staszewski@gmail.com"><b>Email Me</b></a> | <a href="https://www.linkedin.com/in/estaszewski/"><b>My LinkedIn</b></a></b></a> | <a href="https://www.equal1.com/"><b>Equal1 Website</b></a></b></a>
 </div>
 
-This project is still WIP. Results may evolve as improvements are made. Feedback is welcome.
+This project is still WIP. Please note that the information will not always reflect the code present in GNN-QGNN.ipynb, as the code and results are being constantly updated. Feedback is welcome.
 
 ## Introduction
 
