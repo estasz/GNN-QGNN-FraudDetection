@@ -66,5 +66,3 @@ Performance is evaluated using precision, recall, and $F_1$-scores, and plotted 
 | PR AUC | 0.7843 | 0.7851 | 0.8076 |
 
 </div>
-
-The charts below compare the GNN (GraphSAGE) and QGNN (SGConv) models. SGConv was selected as the preferred QGNN architecture because it outperformed GNN across all five metrics, while GCN outperformed the classical GNN in only four metrics.
