@@ -13,7 +13,7 @@
    <a href="mailto:erik.staszewski@gmail.com"><b>Email Me</b></a> | <a href="https://www.linkedin.com/in/estaszewski/"><b>My LinkedIn</b></a></b></a> | <a href="https://www.equal1.com/"><b>Equal1 Website</b></a></b></a>
 </div>
 
-This project is still WIP. Please note that the information will not always reflect the code present in GNN-QGNN.ipynb, as the code and results are being constantly updated. Feedback is welcome.
+This project is still WIP. Please note that the information presented below may not always reflect the code present in GNN-QGNN.ipynb, as the code and results are being constantly updated. Feedback is welcome.
 
 ## Introduction
 
@@ -30,10 +30,9 @@ Performance is evaluated using precision, recall, and $F_1$-scores, and plotted 
 
 **GNN Model**
 
-* Uses 3 GraphSAGE convolutional layers, each followed by batch normalization to stabilize training.
-* Uses GeLU activation, enhancing non-linearity.
+* 3 GraphSAGE convolutional layers, each followed by batch normalization to stabilize training, and GeLU activation to enhance non-linearity.
 * The dense layer maps the embeddings to a single scalar output, followed by a sigmoid activation for binary fraud classification.
-* Trained for 100 epochs, optimized using Adam with binary cross-entropy loss (BCELoss).
+* Trained for 100 epochs, optimized using Adam with binary cross-entropy loss (BCELoss), with a learning rate of 0.01.
 
 <a name="top"></a>
 <div align="center">
@@ -42,11 +41,10 @@ Performance is evaluated using precision, recall, and $F_1$-scores, and plotted 
 
 **QGNN Model**
 
-* Uses a hybrid quantum-classical approach, incorporating an SGConv layer for initial feature extraction.
+* Uses a hybrid quantum-classical approach, incorporating an SGConv layer for initial feature extraction, followed by ReLU activation.
 * Quantum computation is performed with a single-qubit quantum layer, consisting of RX and RY gates, followed by pooling and a fully connected layer.
-* Uses ReLU activation before the quantum layer to maintain expressiveness in classical feature extraction.
 * Training uses gradient-based updates with the parameter shift rule, ensuring proper backpropagation through the quantum circuit.
-* Trained for 200 epochs, optimized using Adam with binary cross-entropy loss (BCELoss).
+* Trained for 200 epochs, optimized using Adam with binary cross-entropy loss (BCELoss), with a learning rate of 0.01.
 
 <a name="top"></a>
 <div align="center">
@@ -57,12 +55,14 @@ Performance is evaluated using precision, recall, and $F_1$-scores, and plotted 
 
 <div align="center">
 
-| Metric          | GNN (GraphSAGE) | QGNN (GCN) | QGNN (SGConv) |
-|---------------|----------------|------------|---------------|
-| Precision Score | 0.8645 | 0.8671 | 0.8662 |
-| Recall Score | 0.8221 | 0.8405 | 0.8344 |
-| $F_1$ Score | 0.8428 | 0.8536 | 0.8500 |
-| ROC AUC | 0.9541 | 0.9237 | 0.9652 |
-| PR AUC | 0.7843 | 0.7851 | 0.8076 |
+| Metric          | GNN (GCN) | GNN (GraphSAGE) | QGNN (GCN) | QGNN (SGConv) |
+|---------------|----------------|----------------|------------|---------------|
+| Precision Score | 0.8627 | 0.8645 | **0.8671** | 0.8662 |
+| Recall Score | 0.8098 | 0.8221 | **0.8405** | 0.8344 |
+| $F_1$ Score | 0.8354 | 0.8428 | **0.8536** | 0.8500 |
+| ROC AUC | **0.9659** | 0.9541 | 0.9237 | 0.9652 |
+| PR AUC | 0.7490 | 0.7843 | 0.7851 | **0.8076** |
 
 </div>
+
+Values in **bold** indicate the best results in that metric.
