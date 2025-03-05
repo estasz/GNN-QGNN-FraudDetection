@@ -64,4 +64,5 @@ Performance is evaluated using precision, recall, and $F_1$-scores, and plotted 
 
 </div>
 
-Values in **bold** indicate the best results in that metric.
+> [!NOTE]
+> Best results are shown in bold. 
