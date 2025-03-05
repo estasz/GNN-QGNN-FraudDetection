@@ -30,9 +30,9 @@ Performance is evaluated using precision, recall, and $F_1$-scores, and plotted 
 
 **GNN Model**
 
-* 3 GraphSAGE convolutional layers, each followed by batch normalization to stabilize training, and GeLU activation to enhance non-linearity.
-* The dense layer maps the embeddings to a single scalar output, followed by a sigmoid activation for binary fraud classification.
-* Trained for 100 epochs, optimized using Adam with binary cross-entropy loss (BCELoss), with a learning rate of 0.01.
+* The model consists of 3 GraphSAGE convolutional layers, each followed by batch normalization to stabilize training, and GeLU activation to enhance non-linearity.
+* A fully connected (dense) layer maps the final embeddings to a single scalar output, followed by a sigmoid activation for fraud classification.
+* The model is trained for 100 epochs, optimized using Adam, with BCELoss (or FocalLoss) as the loss function, and a learning rate of 0.01.
 
 <a name="top"></a>
 <div align="center">
@@ -41,10 +41,9 @@ Performance is evaluated using precision, recall, and $F_1$-scores, and plotted 
 
 **QGNN Model**
 
-* Uses a hybrid quantum-classical approach, incorporating an SGConv layer for initial feature extraction, followed by ReLU activation.
-* Quantum computation is performed with a single-qubit quantum layer, consisting of RX and RY gates, followed by pooling and a fully connected layer.
-* Training uses gradient-based updates with the parameter shift rule, ensuring proper backpropagation through the quantum circuit.
-* Trained for 200 epochs, optimized using Adam with binary cross-entropy loss (BCELoss), with a learning rate of 0.01.
+* This model uses a hybrid quantum-classical approach, starting with an SGConv layer for feature extraction, followed by ReLU activation.
+* A single-qubit quantum layer is used, implementing RX and RY gates, followed by pooling and a fully connected layer.
+* The model is trained for 200 epochs, optimized using Adam, with BCELoss (or FocalLoss) as the loss function, and a learning rate of 0.01.
 
 <a name="top"></a>
 <div align="center">
