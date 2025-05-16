@@ -13,8 +13,6 @@
    <a href="mailto:erik.staszewski@gmail.com"><b>Email Me</b></a> | <a href="https://www.linkedin.com/in/estaszewski/"><b>My LinkedIn</b></a></b></a> | <a href="https://www.equal1.com/"><b>Equal1</b></a></b></a> | <a href="https://www.equal1.com/bell-1"><b>Bell-1</b></a></b></a>
 </div>
 
-This project is still WIP. Please note that the information presented below may not always reflect the code present in GNN-QGNN.ipynb, as the code and results are being constantly updated. Feedback is welcome.
-
 ## Introduction
 
 This project, by Erik Staszewski under the supervision of David Redmond for Equal1, seeks to implement and extend quantum computing techniques for credit card fraud detection. The primary objective is to construct and compare the performance of a classical Graph Neural Network (GNN) with a Quantum Graph Neural Network (QGNN) for binary classification of fraudulent and non-fraudulent credit card transactions.
@@ -34,7 +32,7 @@ Performance is evaluated using precision, recall, and $F_1$-scores, and plotted 
 
 * The GNN model consists of 3 GraphSAGE or GCN convolutional layers, each followed by batch normalization, and a GeLU actiation.
 * A dense layer maps the final embeddings to a single scalar output, followed by a sigmoid activation for fraud classification.
-* The GNN model is trained for 100 epochs, optimized with Adam, BCELoss as the loss function, and a learning rate of 0.01.
+* The GNN model is trained for 100 epochs, optimized with Adam, has BCELoss as the loss function, a weight-decay of $1e^{-4}$, and a learning rate of 0.01.
 
 <a name="top"></a>
 <div align="center">
@@ -45,7 +43,8 @@ Performance is evaluated using precision, recall, and $F_1$-scores, and plotted 
 
 * The QGNN model consists of a single SGConv layer, followed by ReLU actication.
 * A single-qubit quantum layer is used, implementing RX and RY gates, followed by a dense layer, and a sigmoid activation for fraud classification.
-* The QGNN model is trained for 200 or 280 epochs, optimized using Adam, with BCELoss or FocalLoss as the loss function, and a learning rate of 0.01.
+* The QGNN BCELoss model is trained for 220 epochs, optimized using Adam, has BCELoss as the loss function, a weight decay of $1e^{-4}$, and a learning rate of 0.01.
+* The QGNN FocalLoss model is trained for 280 epochs, optimized using Adam, has FocalLoss as the loss function with any Alpha value and a Gamma value of 5.5, and a learning rate of 0.01
 
 <a name="top"></a>
 <div align="center">
@@ -54,7 +53,7 @@ Performance is evaluated using precision, recall, and $F_1$-scores, and plotted 
 
 ## Results
 
-For comparisons sake, other types of GNN layers were considered, as well as other loss functions.
+The results are shown below. As shown below, the QGNN BCELoss model outperforms both GNN models, and the QGNN FocalLoss model outperforms the QGNN BCELoss model in three metrics.
 
 <div align="center">
 
@@ -91,11 +90,11 @@ For comparisons sake, other types of GNN layers were considered, as well as othe
     </tr>
     <tr>
       <td>ROC AUC</td>
-      <td>95.67%</td> <td>96.60%</td> <td>96.53%</td> <td><strong>97.91%</strong></td>
+      <td>95.65%</td> <td>96.59%</td> <td>96.79%</td> <td><strong>97.91%</strong></td>
     </tr>
     <tr>
       <td>PR AUC</td>
-      <td>78.68%</td> <td>74.91%</td> <td>80.76%</td> <td><strong>80.98%</strong></td>
+      <td>78.68%</td> <td>74.90%</td> <td>80.80%</td> <td><strong>80.98%</strong></td>
     </tr>
   </tbody>
 </table>
@@ -108,6 +107,10 @@ For comparisons sake, other types of GNN layers were considered, as well as othe
 ## How to Run
 
 This project includes both a classical Graph Neural Network (GNN) and a hybrid Quantum Graph Neural Network (QGNN) for credit card fraud detection. The QGNN uses a simulated quantum circuit based on NVIDIA's CUDA-Q framework.
+
+### Hardware Requirements
+
+* <a href="https://www.equal1.com/bell-1">Equal1's Bell-1 Quantum Computer</a></a> for high-speed QGNN results
 
 ### System Requirements
 
