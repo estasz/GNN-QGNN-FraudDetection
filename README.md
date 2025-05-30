@@ -115,7 +115,7 @@ This project includes both a classical Graph Neural Network (GNN) and a hybrid Q
 ### System Requirements
 
 * OS: Linux
-* Python 3.10+
+* Python 3.9, 3.10, or 3.11 (for CUDA-Q simulation)
 * NVIDIA GPU with CUDA support (for CUDA-Q simulation)
 
 ### Code Preparation
