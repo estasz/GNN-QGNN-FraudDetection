@@ -10,7 +10,7 @@
 ---
 
 <div align="center">
-   <a href="mailto:erik.staszewski@gmail.com"><b>Email Me</b></a> | <a href="https://www.linkedin.com/in/estaszewski/"><b>My LinkedIn</b></a></b></a> | <a href="https://www.equal1.com/"><b>Equal1</b></a></b></a> | <a href="https://www.equal1.com/bell-1"><b>Bell-1</b></a></b></a>
+   <a href="mailto:erik.staszewski@gmail.com"><b>Email Me</b></a> | <a href="https://www.linkedin.com/in/estasz/"><b>My LinkedIn</b></a></b></a> | <a href="https://www.equal1.com/"><b>Equal1</b></a></b></a> | <a href="https://www.equal1.com/bell-1"><b>Bell-1</b></a></b></a>
 </div>
 
 ## Introduction
