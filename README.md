@@ -53,7 +53,7 @@ Performance is evaluated using precision, recall, and $F_1$-scores, and plotted 
 
 ## Results
 
-The results are shown below. As shown below, the QGNN BCELoss model outperforms both GNN models, and the QGNN FocalLoss model outperforms the QGNN BCELoss model in three metrics.
+The results are shown below. As shown below, the QGNN BCELoss model outperforms both GNN models in all metrics, and the QGNN FocalLoss model outperforms the QGNN BCELoss model in three metrics.
 
 <div align="center">
 
