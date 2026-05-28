@@ -4,13 +4,13 @@
 
 <a name="top"></a>
 <div align="center">
-  <img src="./figures/equal1.png" style="width: 300px;"/>
+  <img src="./figures/equal2.png" style="width: 300px;"/>
 </div>
 
 ---
 
 <div align="center">
-   <a href="mailto:erik.staszewski@gmail.com"><b>Email Me</b></a> | <a href="https://www.linkedin.com/in/estasz/"><b>My LinkedIn</b></a></b></a> | <a href="https://www.equal1.com/"><b>Equal1</b></a></b></a> | <a href="https://www.equal1.com/bell-1"><b>Bell-1</b></a></b></a>
+   <a href="mailto:erik.staszewski@gmail.com"><b>Email Me</b></a> | <a href="https://www.linkedin.com/in/estasz/"><b>My LinkedIn</b></a></b></a> | <a href="https://www.equal1.com/"><b>Equal1</b></a></b></a> | <a href="https://www.equal1.com/product"><b>RacQ</b></a></b></a>
 </div>
 
 ## Introduction
@@ -110,7 +110,7 @@ This project includes both a classical Graph Neural Network (GNN) and a hybrid Q
 
 ### Hardware Requirements
 
-* <a href="https://www.equal1.com/bell-1">Equal1's Bell-1 Quantum Computer</a></a> for high-speed QGNN results
+* <a href="https://www.equal1.com/product">Equal1's RacQ Quantum Computer</a></a> for high-speed QGNN results
 
 ### System Requirements
 
